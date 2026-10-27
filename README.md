@@ -26,7 +26,7 @@ npm install --save-dev skeleton-framework
 Or clone the development repository:
 
 ```bash
-git clone https://github.com/skeleton-framework/skeleton-framework.git
+git clone https://github.com/coach-punk/skeleton-framework.git
 cd skeleton-framework
 npm install
 ```
@@ -62,5 +62,5 @@ Open [dist/index.html](dist/index.html) in your browser or run `npm run serve` t
 
 ## Contributing & Support
 
-- **Bug Reports & Requests**: Submit issues on the [GitHub Issue Tracker](https://github.com/skeleton-framework/skeleton-framework/issues).
+- **Bug Reports & Requests**: Submit issues on the [GitHub Issue Tracker](https://github.com/coach-punk/skeleton-framework/issues).
 - **License**: MIT

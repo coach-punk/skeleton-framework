@@ -10,7 +10,7 @@
     "skeleton",
     "skeleton-framework"
   ],
-  "homepage": "https://github.com/skeleton-framework/skeleton-framework",
+  "homepage": "https://github.com/coach-punk/skeleton-framework",
   "ignore": [
     "*",
     "!dist/*"
