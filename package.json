@@ -17,7 +17,8 @@
     "start": "concurrently \"npm run watch\" \"npm run serve\"",
     "build": "node index.js",
     "watch": "node index.js --watch",
-    "serve": "vite dist --port 3000 --open"
+    "serve": "vite --open",
+    "security:audit": "npm audit --audit-level=high"
   },
   "repository": {
     "type": "git",
