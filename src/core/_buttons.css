@@ -30,15 +30,20 @@ input[type="button"] {
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
-input[type="button"]:hover,
-.button:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
+input[type="button"]:hover {
   color: var(--button-font-color-enter);
   border-color: var(--button-border-color-enter);
-  outline: 0;
+}
+
+.button:focus-visible,
+button:focus-visible,
+input[type="submit"]:focus-visible,
+input[type="reset"]:focus-visible,
+input[type="button"]:focus-visible {
+  color: var(--button-font-color-enter);
+  border-color: var(--button-border-color-enter);
+  outline: 2px solid var(--primary-color, #1EAEDB);
+  outline-offset: 2px;
 }
 
 .button:active,

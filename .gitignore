@@ -1,13 +1,29 @@
-/*
-!/dist
-!/lib
-!/src
-!/.editorconfig
-!/.gitignore
-!/.npmignore
-!/bower.json
-!/index.js
-!/LICENSE
-!/package.json
-!/package-lock.json
-!/README.md
+# Operating System files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment variables & secrets
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.cert
+*.crt
+
+# Build outputs & dependencies
+node_modules/
+bower_components/
+dist/
+build/
+
+# Logs & temporary files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.idea/
+.vscode/
+*.swp
+*.bak
