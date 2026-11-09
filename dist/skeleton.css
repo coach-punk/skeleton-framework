@@ -834,17 +834,25 @@ input[type="button"] {
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
-input[type="button"]:hover,
-.button:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
+input[type="button"]:hover {
   color: #333;
   color: var(--button-font-color-enter);
   border-color: #888;
   border-color: var(--button-border-color-enter);
-  outline: 0;
+}
+
+.button:focus-visible,
+button:focus-visible,
+input[type="submit"]:focus-visible,
+input[type="reset"]:focus-visible,
+input[type="button"]:focus-visible {
+  color: #333;
+  color: var(--button-font-color-enter);
+  border-color: #888;
+  border-color: var(--button-border-color-enter);
+  outline: 2px solid #1EAEDB;
+  outline: 2px solid var(--primary-color, #1EAEDB);
+  outline-offset: 2px;
 }
 
 .button:active,
@@ -1110,19 +1118,21 @@ textarea {
   resize: vertical;
 }
 
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="date"]:focus,
-input[type="search"]:focus,
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-select:focus {
+input[type="email"]:focus-visible,
+input[type="number"]:focus-visible,
+input[type="date"]:focus-visible,
+input[type="search"]:focus-visible,
+input[type="text"]:focus-visible,
+input[type="tel"]:focus-visible,
+input[type="url"]:focus-visible,
+input[type="password"]:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
   border: 1px solid #33C3F0;
   border: var(--form-border-enter);
-  outline: 0;
+  outline: 2px solid #1EAEDB;
+  outline: 2px solid var(--primary-color, #1EAEDB);
+  outline-offset: 1px;
 }
 
 .has-error,

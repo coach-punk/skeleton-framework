@@ -5,9 +5,9 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title>Skeleton Framework | Responsive CSS Templates &amp; Component Showcase</title>
+  <meta name="description" content="Starter template and interactive showcase demonstrating Skeleton Framework grids, cards, typography, buttons, forms, alerts, tables, and theming.">
+  <meta name="author" content="Skeleton Framework">
 
   <!-- Security & Privacy Policies
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -17,7 +17,7 @@
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -25,8 +25,7 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="dist/skeleton.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -35,19 +34,610 @@
 </head>
 <body>
 
-  <!-- Primary Page Layout
+  <!-- Header & Navigation Template
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
+  <header class="container">
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="https://getskeleton.com" rel="noopener noreferrer">Skeleton documentation</a>.</p>
+      <div class="twelve columns">
+        <p><a href="#main-title">Skip to main content</a></p>
+        <nav aria-label="Template sections">
+          <ul class="list-inline">
+            <li><strong>Skeleton Framework</strong></li>
+            <li><a href="#grid">Grid Layouts</a></li>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#alerts">Alerts</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#lists-code">Lists &amp; Code</a></li>
+          </ul>
+        </nav>
+        <hr>
       </div>
     </div>
-  </div>
+  </header>
+
+  <!-- Main Content
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <main class="container">
+
+    <!-- Hero Banner Template -->
+    <section aria-labelledby="main-title">
+      <div class="row">
+        <div class="eight columns">
+          <h1 id="main-title" tabindex="-1">Skeleton Framework Templates</h1>
+          <p>
+            A lightweight, mobile-first CSS boilerplate built with modular CSS Custom Properties
+            (<code>src/core/_root.css</code>), a 12-column responsive grid, and accessible
+            <code>:focus-visible</code> defaults. Use the examples below as copy-ready building blocks for
+            landing pages, dashboards, and documentation sites.
+          </p>
+          <p>
+            <a class="button button-primary" href="#grid">Explore Grid Layouts</a>
+            <a class="button" href="https://github.com/coach-punk/skeleton-framework" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          </p>
+        </div>
+        <div class="four columns">
+          <div class="card">
+            <h2>Quick Start</h2>
+            <p>Link <code>dist/skeleton.css</code> or <code>dist/skeleton.min.css</code> and wrap content in <code>.container</code> and <code>.row</code>.</p>
+            <p class="text-success"><strong>~100ms</strong> PostCSS + esbuild compile</p>
+            <div class="u-text-right">
+              <a class="button button-success" href="#lists-code">Theme Tokens</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- 1. Responsive Grid & Page Layout Templates
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="grid" aria-labelledby="grid-heading">
+      <div class="row">
+        <div class="twelve columns">
+          <h2 id="grid-heading">1. Responsive 12-Column Grid Templates</h2>
+          <p>
+            Columns stack full-width on mobile (<code>&lt; 560px</code>) by default and activate at
+            <code>&gt;= 560px</code>, or target specific breakpoints using <code>xs-*</code>,
+            <code>sm-*</code> (<code>&gt;= 560px</code>), <code>md-*</code> (<code>&gt;= 720px</code>),
+            and <code>lg-*</code> (<code>&gt;= 960px</code>).
+          </p>
+        </div>
+      </div>
+
+      <h3>Split Content Layout (One-Third / Two-Thirds)</h3>
+      <div class="row">
+        <div class="one-third column">
+          <div class="alert">
+            <strong>Sidebar (<code>.one-third.column</code>)</strong> — Ideal for navigation menus, filters, or profile summaries.
+          </div>
+        </div>
+        <div class="two-thirds column">
+          <div class="alert alert-primary">
+            <strong>Primary Content (<code>.two-thirds.column</code>)</strong> — Main workspace area paired alongside a four-column sidebar.
+          </div>
+        </div>
+      </div>
+
+      <h3>Multi-Breakpoint Responsive Grid (<code>xs-*</code>, <code>sm-*</code>, <code>md-*</code>, <code>lg-*</code>)</h3>
+      <div class="row">
+        <div class="xs-twelve sm-six md-six lg-three columns">
+          <div class="alert">
+            <strong>Metric 1</strong>: <code>xs-12 sm-6 lg-3</code>
+          </div>
+        </div>
+        <div class="xs-twelve sm-six md-six lg-three columns">
+          <div class="alert">
+            <strong>Metric 2</strong>: <code>xs-12 sm-6 lg-3</code>
+          </div>
+        </div>
+        <div class="xs-twelve sm-six md-six lg-three columns">
+          <div class="alert">
+            <strong>Metric 3</strong>: <code>xs-12 sm-6 lg-3</code>
+          </div>
+        </div>
+        <div class="xs-twelve sm-six md-six lg-three columns">
+          <div class="alert">
+            <strong>Metric 4</strong>: <code>xs-12 sm-6 lg-3</code>
+          </div>
+        </div>
+      </div>
+
+      <h3>Centered Callout with Column Offsets</h3>
+      <div class="row">
+        <div class="eight columns offset-by-two">
+          <div class="alert alert-success u-text-center">
+            <strong>Centered Banner (<code>.eight.columns.offset-by-two</code>)</strong> — Uses column offsets to center a focused callout or sign-in box without extra wrapper elements.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- 2. Cards & Interactive Link Tiles
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="cards" aria-labelledby="cards-heading">
+      <div class="row">
+        <div class="twelve columns">
+          <h2 id="cards-heading">2. Card Templates</h2>
+          <p>
+            Use <code>.card</code> for grouped callouts, pricing tiers, or dashboard widgets, and
+            <code>a.card</code> for interactive navigation tiles with built-in hover lift.
+          </p>
+        </div>
+      </div>
+
+      <h3>Feature &amp; Action Cards</h3>
+      <div class="row">
+        <div class="six columns">
+          <div class="card">
+            <h4>Starter Plan</h4>
+            <p>Includes the 12-column responsive grid, typography scale, form controls, and utility classes for rapid prototyping.</p>
+            <div class="u-text-right">
+              <button type="button" class="button-primary">Select Starter</button>
+            </div>
+          </div>
+        </div>
+        <div class="six columns">
+          <div class="card">
+            <h4>Custom Theme</h4>
+            <p>Override design tokens in <code>:root</code> for brand colors, border radii, gutters, and button states with static fallbacks.</p>
+            <div class="u-text-right">
+              <button type="button" class="button-success">Configure Tokens</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Interactive Link Cards (<code>a.card</code>)</h3>
+      <div class="row">
+        <div class="four columns">
+          <a class="card" href="#forms">
+            <h4>Accessible Forms</h4>
+            <p>Explore input states, fieldsets, and WCAG-compliant <code>:focus-visible</code> outlines.</p>
+          </a>
+        </div>
+        <div class="four columns">
+          <a class="card" href="#tables">
+            <h4>Data Tables</h4>
+            <p>Compare standard full-width tables and horizontally scrolling <code>.table-responsive</code> containers.</p>
+          </a>
+        </div>
+        <div class="four columns">
+          <a class="card" href="#lists-code">
+            <h4>CSS Variables</h4>
+            <p>See how <code>_root.css</code> powers runtime theming across every component module.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- 3. Typography & Semantic Text
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="typography" aria-labelledby="typography-heading">
+      <div class="row">
+        <div class="twelve columns">
+          <h2 id="typography-heading">3. Typography &amp; Text Utilities</h2>
+          <p>
+            Headings use light-weight <code>Raleway</code> with a modular <code>rem</code> scale. Body text defaults to
+            <code>1rem</code> with a <code>1.6rem</code> line height.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="six columns">
+          <h3>Heading Scale</h3>
+          <h1>Heading <code>&lt;h1&gt;</code> (3.6rem)</h1>
+          <h2>Heading <code>&lt;h2&gt;</code> (3.0rem)</h2>
+          <h3>Heading <code>&lt;h3&gt;</code> (2.4rem)</h3>
+          <h4>Heading <code>&lt;h4&gt;</code> (1.8rem)</h4>
+          <h5>Heading <code>&lt;h5&gt;</code> (1.5rem)</h5>
+          <h6>Heading <code>&lt;h6&gt;</code> (1.2rem)</h6>
+        </div>
+        <div class="six columns">
+          <h3>Inline Styles &amp; Color Helpers</h3>
+          <p>
+            Standard inline elements include <strong>bold text</strong>, <em>italicized emphasis</em>,
+            <u>underlined text</u>, <s>strikethrough text</s>, <a href="#typography">standard links</a>,
+            and inline <code>code</code> tokens.
+          </p>
+          <p>
+            Contextual text color utilities:
+            <span class="text-primary"><strong>.text-primary</strong> (brand highlight)</span>,
+            <span class="text-success"><strong>.text-success</strong> (positive confirmation)</span>, and
+            <span class="text-danger"><strong>.text-danger</strong> (error or destructive warning)</span>.
+          </p>
+          <figure>
+            <blockquote cite="https://github.com/coach-punk/skeleton-framework">
+              <p>
+                "A simple, responsive boilerplate that gives you a clean foundation without locking you into heavy UI opinionation."
+              </p>
+            </blockquote>
+            <figcaption>
+              — Design principle from the <cite>Skeleton Framework Documentation</cite>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- 4. Buttons & Action Variants
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="buttons" aria-labelledby="buttons-heading">
+      <div class="row">
+        <div class="twelve columns">
+          <h2 id="buttons-heading">4. Buttons &amp; Interactive States</h2>
+          <p>
+            Button styles apply uniformly to <code>&lt;a class="button"&gt;</code>,
+            <code>&lt;button&gt;</code>, and <code>&lt;input type="submit|button|reset"&gt;</code> across four semantic variants.
+          </p>
+          <div>
+            <a class="button" href="#buttons">Default Link</a>
+            <button type="button">Default Button</button>
+            <input type="button" value="Default Input">
+            <button type="button" disabled>Default Disabled</button>
+          </div>
+          <div>
+            <a class="button button-primary" href="#buttons">Primary Link</a>
+            <button type="button" class="button-primary">Primary Button</button>
+            <input type="button" class="button-primary" value="Primary Input">
+            <button type="button" class="button-primary" disabled>Primary Disabled</button>
+          </div>
+          <div>
+            <a class="button button-success" href="#buttons">Success Link</a>
+            <button type="button" class="button-success">Success Button</button>
+            <input type="button" class="button-success" value="Success Input">
+            <button type="button" class="button-success" disabled>Success Disabled</button>
+          </div>
+          <div>
+            <a class="button button-danger" href="#buttons">Danger Link</a>
+            <button type="button" class="button-danger">Danger Button</button>
+            <input type="button" class="button-danger" value="Danger Input">
+            <button type="button" class="button-danger" disabled>Danger Disabled</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- 5. Alerts & Notifications
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="alerts" aria-labelledby="alerts-heading">
+      <div class="row">
+        <div class="twelve columns">
+          <h2 id="alerts-heading">5. Alerts &amp; Status Banners</h2>
+          <p>Full-width status banners for neutral notices, primary announcements, confirmations, and error states.</p>
+          <div class="alert" role="status">
+            <strong>Notice (<code>.alert</code>):</strong> System maintenance is scheduled for Sunday at 02:00 UTC.
+          </div>
+          <div class="alert alert-primary" role="status">
+            <strong>Info (<code>.alert.alert-primary</code>):</strong> Version 1.1.1 introduces strict Content Security Policy defaults and <code>:focus-visible</code> support.
+          </div>
+          <div class="alert alert-success" role="status">
+            <strong>Success (<code>.alert.alert-success</code>):</strong> Production stylesheets compiled to <code>dist/skeleton.css</code> and <code>dist/skeleton.min.css</code>.
+          </div>
+          <div class="alert alert-danger" role="alert">
+            <strong>Error (<code>.alert.alert-danger</code>):</strong> Unable to verify webhook signature. Check your endpoint secret and retry.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- 6. Forms, Search & Validation Templates
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="forms" aria-labelledby="forms-heading">
+      <div class="row">
+        <div class="twelve columns">
+          <h2 id="forms-heading">6. Forms, Search &amp; Validation States</h2>
+          <p>
+            Form controls pair with <code>.u-full-width</code> to fill grid columns and support
+            <code>.has-error</code> and <code>.has-success</code> validation borders.
+          </p>
+        </div>
+      </div>
+
+      <!-- Search Filter Bar Template -->
+      <h3>Search &amp; Filter Bar Template</h3>
+      <search>
+        <form action="#forms" method="get">
+          <div class="row">
+            <div class="six columns">
+              <label for="component-search">Search components</label>
+              <input
+                class="u-full-width"
+                type="search"
+                id="component-search"
+                name="q"
+                placeholder="e.g. grid, buttons, cards"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+              >
+            </div>
+            <div class="four columns">
+              <label for="category-filter">Module category</label>
+              <select class="u-full-width" id="category-filter" name="category">
+                <option value="all">All modules</option>
+                <option value="layout">Layout &amp; Grid</option>
+                <option value="typography">Typography &amp; Lists</option>
+                <option value="interactive">Buttons &amp; Forms</option>
+                <option value="feedback">Alerts &amp; Cards</option>
+                <option value="tables">Tables &amp; Code</option>
+              </select>
+            </div>
+            <div class="two columns">
+              <label for="search-submit">Apply filter</label>
+              <button type="submit" id="search-submit" class="button-primary u-full-width">Filter</button>
+            </div>
+          </div>
+        </form>
+      </search>
+
+      <!-- Contact & Settings Form Template -->
+      <h3>Multi-Column Form with Validation States</h3>
+      <form action="#forms" method="post">
+        <fieldset>
+          <legend>Project Configuration &amp; Contact</legend>
+
+          <div class="row">
+            <div class="six columns">
+              <label for="contact-name">Full name</label>
+              <input
+                class="u-full-width"
+                type="text"
+                id="contact-name"
+                name="full_name"
+                autocomplete="name"
+                placeholder="Ada Lovelace"
+                required
+              >
+            </div>
+            <div class="six columns">
+              <label for="contact-topic">Inquiry topic</label>
+              <select class="u-full-width" id="contact-topic" name="topic">
+                <option value="support">Technical Support</option>
+                <option value="architecture">Design System Architecture</option>
+                <option value="security">Security &amp; CSP Review</option>
+                <option value="accessibility">Accessibility Audit</option>
+                <option value="performance">Build Pipeline Performance</option>
+                <option value="other">General Feedback</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="six columns">
+              <label for="contact-email-error">Work email (<code>.has-error</code> example)</label>
+              <input
+                class="u-full-width has-error"
+                type="email"
+                id="contact-email-error"
+                name="work_email"
+                autocomplete="email"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                value="developer@invalid-domain"
+                aria-invalid="true"
+                aria-describedby="email-error-msg"
+              >
+              <p id="email-error-msg" class="text-danger">Please enter a valid email address including a top-level domain.</p>
+            </div>
+            <div class="six columns">
+              <label for="repo-url-success">Repository URL (<code>.has-success</code> example)</label>
+              <input
+                class="u-full-width has-success"
+                type="url"
+                id="repo-url-success"
+                name="repo_url"
+                autocomplete="url"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                value="https://github.com/coach-punk/skeleton-framework"
+                aria-describedby="url-success-msg"
+              >
+              <p id="url-success-msg" class="text-success">Repository URL verified over HTTPS.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <fieldset>
+                <legend>Preferred bundle output</legend>
+                <label>
+                  <input type="radio" name="bundle_format" value="minified" checked>
+                  <span class="label-body">Minified production bundle (<code>dist/skeleton.min.css</code>)</span>
+                </label>
+                <label>
+                  <input type="radio" name="bundle_format" value="expanded">
+                  <span class="label-body">Expanded stylesheet with fallback declarations (<code>dist/skeleton.css</code>)</span>
+                </label>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <label for="project-notes">Implementation notes</label>
+              <textarea
+                class="u-full-width"
+                id="project-notes"
+                name="notes"
+                placeholder="Describe your layout or theming requirements..."
+              ></textarea>
+              <label>
+                <input type="checkbox" name="send_copy" value="yes">
+                <span class="label-body">Send a copy of this configuration to my email</span>
+              </label>
+              <button type="submit" class="button-primary">Save Configuration</button>
+              <input type="reset" value="Reset Form">
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+
+    <hr>
+
+    <!-- 7. Tables & Responsive Table Wrapper
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="tables" aria-labelledby="tables-heading">
+      <div class="row">
+        <div class="twelve columns">
+          <h2 id="tables-heading">7. Tables &amp; Responsive Data Grids</h2>
+          <p>
+            Use standard <code>&lt;table&gt;</code> elements for wrapping cell content, or wrap wide tables in
+            <code>&lt;div class="table-responsive"&gt;</code> for horizontal scrolling on narrow viewports.
+          </p>
+
+          <h3>Responsive Breakpoint &amp; Module Reference (<code>.table-responsive</code>)</h3>
+          <div class="table-responsive" tabindex="0" role="region" aria-labelledby="breakpoint-table-caption">
+            <table class="u-full-width">
+              <caption id="breakpoint-table-caption">Skeleton Framework responsive breakpoints, prefixes, and container behavior</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Tier</th>
+                  <th scope="col">Class Prefix</th>
+                  <th scope="col">Min Viewport</th>
+                  <th scope="col">Column Behavior</th>
+                  <th scope="col">Offset Support</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Extra Small (Mobile)</th>
+                  <td><code>.xs-*</code></td>
+                  <td><code>0px</code></td>
+                  <td>Explicit mobile columns; unprefixed columns stack at <code>100%</code></td>
+                  <td>Standard flow</td>
+                </tr>
+                <tr>
+                  <th scope="row">Small (Phablet)</th>
+                  <td><code>.one</code>..<code>.twelve</code>, <code>.sm-*</code></td>
+                  <td><code>560px</code></td>
+                  <td>12-column float grid activates for default and <code>sm-*</code> classes</td>
+                  <td><code>.offset-by-*</code>, <code>.sm-offset-by-*</code></td>
+                </tr>
+                <tr>
+                  <th scope="row">Medium (Tablet)</th>
+                  <td><code>.md-*</code></td>
+                  <td><code>720px</code></td>
+                  <td>Overrides column widths at tablet viewports</td>
+                  <td><code>.md-offset-by-*</code></td>
+                </tr>
+                <tr>
+                  <th scope="row">Large (Desktop)</th>
+                  <td><code>.lg-*</code></td>
+                  <td><code>960px</code></td>
+                  <td>Overrides column widths for wide desktop layouts</td>
+                  <td><code>.lg-offset-by-*</code></td>
+                </tr>
+                <tr>
+                  <th scope="row">Desktop HD</th>
+                  <td><code>--max-width</code></td>
+                  <td><code>1200px</code></td>
+                  <td><code>.container</code> caps at <code>var(--max-width)</code> (1200px)</td>
+                  <td>Inherited from active tier</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- 8. Lists, Disclosures & Code Blocks
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="lists-code" aria-labelledby="lists-code-heading">
+      <div class="row">
+        <div class="twelve columns">
+          <h2 id="lists-code-heading">8. Lists, Native Disclosures &amp; Custom Theming</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="six columns">
+          <h3>Unordered &amp; Nested Lists</h3>
+          <ul>
+            <li>Modular source files in <code>src/core/</code>
+              <ul>
+                <li><code>_root.css</code> for CSS Custom Properties</li>
+                <li><code>_grid.css</code> for 12-column responsive layout</li>
+                <li><code>_buttons.css</code> and <code>_forms.css</code> with <code>:focus-visible</code></li>
+              </ul>
+            </li>
+            <li>Compiled with PostCSS 8 and minified via esbuild</li>
+            <li>Zero high or critical dependency vulnerabilities</li>
+          </ul>
+        </div>
+        <div class="six columns">
+          <h3>Ordered Workflow &amp; Native Accordion</h3>
+          <ol>
+            <li>Edit design tokens or rules in <code>src/core/_*.css</code></li>
+            <li>Run <code>npm run build</code> (or <code>npm start</code> for live watch + serve)</li>
+            <li>Include <code>dist/skeleton.min.css</code> in production</li>
+          </ol>
+
+          <details name="template-faq">
+            <summary><strong>How do I customize the grid width or gutter?</strong></summary>
+            <p>Override <code>--max-width</code>, <code>--total-columns</code>, or <code>--gutter</code> inside a <code>:root</code> block in your stylesheet.</p>
+          </details>
+          <details name="template-faq">
+            <summary><strong>Are legacy browsers supported alongside CSS Variables?</strong></summary>
+            <p>Yes. The build pipeline runs <code>postcss-custom-properties({ preserve: true })</code> so every rule includes both a static fallback and the dynamic <code>var(--*)</code> declaration.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="twelve columns">
+          <h3>Custom Theme Override Example (<code>&lt;pre&gt;&lt;code&gt;</code>)</h3>
+          <pre tabindex="0"><code>:root {
+  --max-width: 1140px;
+  --gutter: 1.25rem;
+  --link-color: #0FA0CE;
+  --primary-button-background-color: #1EAEDB;
+  --primary-button-background-color-enter: #157b9b;
+  --border-radius: 6px;
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Template
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <footer class="container">
+    <hr>
+    <div class="row">
+      <div class="eight columns">
+        <p>
+          <strong>Skeleton Framework</strong> — MIT Licensed. Built with PostCSS 8 &amp; esbuild.
+        </p>
+      </div>
+      <div class="four columns u-text-right">
+        <a href="#main-title">Back to top</a>
+      </div>
+    </div>
+  </footer>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
-
