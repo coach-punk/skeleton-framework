@@ -51,6 +51,16 @@ Run development commands using npm:
 | `npm run build` | Compiles `src/skeleton.css` to `dist/skeleton.css` and `dist/skeleton.min.css` |
 | `npm run watch` | Runs the persistent in-memory watcher for instant (~15ms) rebuilds on edit |
 | `npm run serve` | Serves `dist/` locally with Vite at `http://localhost:3000` with live reloading |
+| `npm run security:audit` | Runs automated dependency vulnerability auditing |
+
+---
+
+## Security & Best Practices
+
+- **Strict CSP-Ready**: Baseline starter files enforce Content Security Policy directives restricting unauthorized script execution, untrusted font/style origins, and frame-embedding (anti-clickjacking).
+- **HTTPS & Privacy Enforced**: All external assets are pinned to HTTPS with `rel="noopener noreferrer"` attributes to prevent reverse tabnabbing.
+- **Accessible Focus States**: Replaced legacy `outline: 0` suppression with WCAG-compliant `:focus-visible` styling to preserve keyboard navigation.
+- **Secret Hygiene**: Comprehensive repository ignore rules prevent accidental leakage of environment credentials, keys, or build artifacts.
 
 ---
 

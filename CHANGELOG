@@ -1,0 +1,56 @@
+# Changelog
+
+All notable changes to the Skeleton Framework project since the modernization and security upgrade initiative.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+---
+
+## [1.1.1] - 2026-11-09
+
+### Security & Hardening
+- **Content Security Policy (CSP)**:
+  - Implemented strict Content Security Policy meta tags in starter templates (`index.html` and `dist/index.html`) restricting resource loading (`default-src 'self'`, whitelisted fonts/styles, `frame-ancestors 'none'`, `base-uri 'self'`).
+  - Added HTTP security headers (`X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`).
+- **Transport Security**:
+  - Enforced explicit `https://` schemes across all font assets and documentation hyperlinks, removing protocol-relative URL vulnerabilities.
+  - Added `rel="noopener noreferrer"` attributes on external anchors to prevent reverse tabnabbing (`window.opener` abuse).
+- **Secret & Repository Hygiene**:
+  - Hardened `.gitignore` to prevent accidental credential or artifact exposure (`.env*`, `*.pem`, `*.key`, `*.cert`, `*.crt`, build artifacts, and OS/editor metadata).
+- **Accessibility & Focus Indicators**:
+  - Replaced unconstrained `outline: 0` suppression in `src/core/_buttons.css` and `src/core/_forms.css` with standard `:focus-visible` styling (`outline: 2px solid var(--primary-color)`), restoring visible keyboard focus states without affecting mouse clicks.
+- **Dependency Audit Script**:
+  - Added `npm run security:audit` script to `package.json` for automated vulnerability scanning.
+
+### Changed
+- **Dependencies & Engine**:
+  - Bumped devDependencies to patched releases: `autoprefixer` (^10.6.2), `concurrently` (^9.2.5), `esbuild` (^0.25.12), `postcss` (^8.5.32), `postcss-custom-properties` (^14.0.6), `postcss-import` (^16.2.0), `vite` (^6.4.5).
+  - Adopted pnpm lockfile (`pnpm-lock.yaml`) and workspace configuration (`pnpm-workspace.yaml`).
+
+### Documentation
+- Updated `README.md` with:
+  - Dedicated "Security & Best Practices" section outlining CSP, HTTPS, accessible focus states, and secret hygiene.
+  - Documented `npm run security:audit` development script.
+
+---
+
+## [1.1.0] - 2026-10-27
+
+### Added
+- **Modern Build Pipeline**:
+  - Added native Node.js / PostCSS 8 / esbuild build pipeline in `index.js`.
+  - Added Vite local development server (`npm run serve`) with live reloading.
+  - Added concurrent watch-and-serve workflow (`npm start`).
+  - Added fast in-memory incremental rebuild watcher (`npm run watch`).
+- **CSS Architecture**:
+  - Introduced CSS Custom Properties (`--primary-color`, theming variables, and design tokens) in `src/core/_root.css`.
+  - Added modular CSS source structure under `src/core/` (alerts, buttons, cards, forms, grid, lists, misc, queries, spacing, tables, typography, utils).
+  - Added pre-compiled production outputs in `dist/` (`dist/skeleton.css`, `dist/skeleton.min.css`).
+- **Showcase Demo**:
+  - Added interactive demo test page at `dist/index.html` covering the grid system, component styles, buttons, forms, and cards.
+
+### Changed
+- Migrated project repository URLs and ownership to the new GitHub organization (`coach-punk/skeleton-framework`).
+- Updated project metadata, license copyright holders, and author contributions in `package.json`, `bower.json`, and `LICENSE`.
+
